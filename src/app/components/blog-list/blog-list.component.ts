@@ -7,7 +7,7 @@ import { BlogService } from '../../services/blog/blog.service';
 import { BlogPostService } from '../../services/blog-post/blog-post.service';
 import { Blog } from '../../classes/blog';
 
-import { BLOG_LIST } from '../../mock-data/blog_list';
+//import { BLOG_LIST } from '../../mock-data/blog_list';
 
 @Component({
   selector: 'app-blog',
