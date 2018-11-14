@@ -1,35 +1,28 @@
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav
-    #drawer
-    class="sidenav"
-    fixedInViewport="true"
-    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-    [mode]="(isHandset$ | async) ? 'over' : 'side'"
-    [opened]="!(isHandset$ | async)"
-    >
-    <mat-toolbar color="primary">
-      <a routerLink=''>
-        Menu
-      </a>
-    </mat-toolbar>
-    <mat-nav-list>
-      <a mat-list-item [routerLink]="['blogs']">Popular Blogs</a>
-      <a mat-list-item routerLink="bloggers"> Top Bloggers</a>
-      <a mat-list-item [routerLink]="['recent-posts']">New Posts</a>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>Blogular</span>
-    </mat-toolbar>
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+Below are the blogs currently on the Blogmatiq platform
+
+<div class="mdl-grid">
+
+  <div class="mdl-cell mdl-cell--9-col">
+
+</div>
+
+<div>
+  <p>
+    <a [routerLink]="['blogs']"> List of Blogs</a>
+  </p>
+
+    <p>
+      <a routerLink="bloggers">Most Read Bloggers</a>
+    </p>
+
+  <h3>Our Most Recent Blog Posts </h3>
+  <p>
+    For the full list of our most recent blog posts, see <a routerLink="['recent-posts']">here</a>.
+  </p>
+  <ul>
+    <li *ngFor="let post of blog_posts">
+      {{ post }}
+    </li>
+
+  </ul>
+</div>
