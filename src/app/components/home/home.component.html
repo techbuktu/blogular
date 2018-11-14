@@ -5,7 +5,8 @@
     fixedInViewport="true"
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
-    [opened]="!(isHandset$ | async)">
+    [opened]="!(isHandset$ | async)"
+    >
     <mat-toolbar color="primary">
       <a routerLink=''>
         Menu
@@ -27,7 +28,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>Blogmatiq</span>
+      <span>Blogular</span>
     </mat-toolbar>
     <router-outlet></router-outlet>
   </mat-sidenav-content>

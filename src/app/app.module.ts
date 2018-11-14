@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+import { MaterialModule } from './modules/material/material.module';
 import { AppComponent } from './app.component';
 import { BlogListComponent } from './components/blog-list/blog-list.component';
 import { BlogDetailComponent } from './components/blog-detail/blog-detail.component';
@@ -12,6 +13,7 @@ import { BlogpostComponent } from './components/blogpost/blogpost.component';
 import { BloggerListComponent } from './components/blogger-list/blogger-list.component';
 import { BloggerDetailComponent } from './components/blogger-detail/blogger-detail.component';
 import { BlogCategoryDetailComponent } from './components/blog-category-detail/blog-category-detail.component';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { BlogCategoryDetailComponent } from './components/blog-category-detail/b
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
