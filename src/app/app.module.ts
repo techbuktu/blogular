@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppRoutingModule } from './app-routing.module';
+//import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './modules/routing/routing.module';
 import { MaterialModule } from './modules/material/material.module';
 import { AppComponent } from './app.component';
 import { BlogListComponent } from './components/blog-list/blog-list.component';
