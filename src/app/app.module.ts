@@ -14,6 +14,8 @@ import { BlogpostComponent } from './components/blogpost/blogpost.component';
 import { BloggerListComponent } from './components/blogger-list/blogger-list.component';
 import { BloggerDetailComponent } from './components/blogger-detail/blogger-detail.component';
 import { BlogCategoryDetailComponent } from './components/blog-category-detail/blog-category-detail.component';
+import { NavComponent } from './components/nav/nav.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { BlogCategoryDetailComponent } from './components/blog-category-detail/b
     BlogpostComponent,
     BloggerListComponent,
     BloggerDetailComponent,
-    BlogCategoryDetailComponent
+    BlogCategoryDetailComponent,
+    NavComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
