@@ -20,6 +20,14 @@ const routes: Routes = [
     component: BlogListComponent
   },
   {
+    path: 'blogs/:blogUrl',
+    component: BlogDetailComponent
+  },
+  {
+    path: 'blogs/:blogUrl/categories/:categoryUrl',
+    component: BlogCategoryDetailComponent
+  },
+  {
     path: 'bloggers',
     component: BloggerListComponent
   },
