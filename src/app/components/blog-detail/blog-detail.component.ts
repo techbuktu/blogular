@@ -10,7 +10,8 @@ import { Blog } from '../../classes/blog';
 //Import the mock data to use during dev
 import { BLOG_DETAILS } from '../../mock-data/blog';
 import { CATEGORY_LIST } from '../../mock-data/blog_categories';
-import { BLOG_POSTS, BLOG_POST } from '../../mock-data/blog_post'; 
+import { BLOG_POST } from '../../mock-data/blog_post'; 
+import { BLOG_POSTS } from '../../mock-data/blog_posts';
 
 
 @Component({
