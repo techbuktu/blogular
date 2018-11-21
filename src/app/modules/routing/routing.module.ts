@@ -10,7 +10,28 @@ import { BloggerListComponent } from '../../components/blogger-list/blogger-list
 import { BlogpostComponent } from '../../components/blogpost/blogpost.component';
 import { HomeComponent } from '../../components/home/home.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent 
+  },
+  {
+    path: 'blogs',
+    component: BlogListComponent
+  },
+  {
+    path: 'bloggers',
+    component: BloggerListComponent
+  },
+  {
+    path: 'bloggers/:bloggerUrl',
+    component: BloggerDetailComponent
+  },
+  {
+    path: 'blogs/:blogUrl/:postUrl',
+    component: BlogpostComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
