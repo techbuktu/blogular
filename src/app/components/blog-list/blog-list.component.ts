@@ -8,6 +8,7 @@ import { BlogPostService } from '../../services/blog-post/blog-post.service';
 import { Blog } from '../../classes/blog';
 
 import { BLOG_LIST } from '../../mock-data/blog_list';
+import { BLOG_POSTS } from '../../mock-data/blog_posts';
 
 @Component({
   selector: 'app-blog',
@@ -60,6 +61,7 @@ export class BlogListComponent implements OnInit {
       },
       err => {
         this.posts_error_message = err.message;
+        this.blog_posts = BLOG_POSTS;
       },
       () => {
         console.log("BlogComponent.getBlogPosts() done running..");
