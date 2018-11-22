@@ -13,7 +13,7 @@ export class BlogpostComponent implements OnInit {
 
   constructor(private blogPostService: BlogPostService) { }
 
-  
+
   blog_post;
   post_error_message:string;
 
@@ -22,7 +22,7 @@ export class BlogpostComponent implements OnInit {
   }
   
   getBlogPost(){
-    this.blogPostService.getPost('digital-nomad').
+    this.blogPostService.getPost('legacy-of-timbuktu').
     subscribe(
       res => {
         this.blog_post = res;
