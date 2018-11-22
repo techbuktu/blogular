@@ -17,7 +17,7 @@
 </p>
 <ul>  
   <li *ngFor="let post of blog_posts">
-    <a routerLink="['/blogs',post.blog_url, post.id]">
+    <a [routerLink]="['/blogs',post.blog_url, post.link]">
         {{ post.title }} 
     </a>
   </li>

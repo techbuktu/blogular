@@ -1,6 +1,7 @@
 export const BLOG_POSTS = [
     {
         'title': 'The Gift of Hira',
+        'blog_url': 'life',
         'link': 'the-gift-of-Hira',
         'body': `
         Thirty summers and three moons later, he got the Gift of Hira.
@@ -12,6 +13,7 @@ export const BLOG_POSTS = [
     },
     {
         'title': 'In Search of Home',
+        'blog_url': 'life',
         'link':'in-search-of-home',
         'body':`
         Atop the lion mountains, he could see the coast and the ocean beyond.
@@ -23,6 +25,7 @@ export const BLOG_POSTS = [
     },    
     {
         'title': 'The Legacy of Timbuktu',
+        'blog_url': 'life',
         'link':'legacy-of-timbuktu',
         'body':`
         The blood of youth still boiling through his veins, he headed west of the city.
