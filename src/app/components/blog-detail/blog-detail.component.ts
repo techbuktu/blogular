@@ -20,7 +20,7 @@ import { BLOG_POSTS } from '../../mock-data/blog_posts';
 })
 export class BlogDetailComponent implements OnInit {
   blogUrl:string;
-  blog:any;
+  blog;
   blog_error_message:string;
   category_list_error_message:string;
   blog_posts_error_message:string;
