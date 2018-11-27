@@ -8,6 +8,7 @@ import { BlogCategoryService } from '../../services/blog-category/blog-category.
 // Import mock data to use during dev
 import { CATEGORY_LIST } from '../../mock-data/blog_categories';
 import { BLOG_POSTS } from '../../mock-data/blog_posts';
+import { BLOG_CATEGORY } from '../../mock-data/blog_category';
 
 
 @Component({
@@ -24,6 +25,7 @@ export class BlogCategoryDetailComponent implements OnInit {
   delete_post_success_message:string;
   delete_post_error_message: string;
   http_connection_error_message:string;
+  category_posts_error_message:string;
   parentBlogUrl:string;
   categoryUrl: string;
 
@@ -50,6 +52,7 @@ export class BlogCategoryDetailComponent implements OnInit {
         },
         err => {
           this.category_error_message = err.message;
+          this.category = BLOG_CATEGORY;
         },
         () => {
           //REMOVE before deployment
@@ -70,6 +73,7 @@ export class BlogCategoryDetailComponent implements OnInit {
         () => {
           //REMOVE before deployment
           console.log("BlogCatgoryDetailComponent.getPostsinCategory() called.");
+          this.category_posts_error_message = "No blog posts were found in the ", this.category.name, "category."
         }
       )
     }

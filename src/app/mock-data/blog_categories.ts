@@ -12,7 +12,7 @@ export const CATEGORY_LIST = [
     {
         'name': 'Full Stack',
         'link': 'full-stack',
-        'desc': 'You will learn how to use Django and Angular 5 to create n interactive web platform.'
+        'desc': 'You will learn how to use Django and Angular 5 to create an interactive web platform.'
     },
     
 ]

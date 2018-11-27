@@ -1,15 +1,18 @@
 <button (click)="gotoParentBlog()"> << Blog </button>
 
 <h3>
-    {{ category.title }}
+    {{ category.name }}
   </h3>
 
   <p mat-card>
     {{ category.desc }}
   </p>
 
+  <h4>
+    Current Blog Posts
+  </h4>
   <p>
-    These are the most recent blog posts in the {{ category.title }} category.
+    These are the most recent blog posts in the {{ category.name }} category.
   </p>
 
   <div class="container" *ngIf="category_posts">
