@@ -6,3 +6,13 @@
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
     background-size: cover;
   }
+
+  .blog_post_title{
+    color: blue;
+    margin-bottom: 25px;
+  }
+  .blog_post_body{
+    padding: 25px 15px;
+    color: gray;
+    height: 50%;
+  }
