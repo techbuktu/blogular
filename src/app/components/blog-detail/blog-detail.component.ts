@@ -25,7 +25,7 @@ export class BlogDetailComponent implements OnInit {
   category_list_error_message:string;
   blog_posts_error_message:string;
   delete_category_error_message:string;
-  blog_posts;
+  blog_posts:any;
   category_list:any;
   mock_category_list:string[] = ['Tech Kalam', 'Tastes of the East', 'Rhythms of Africa'];
 
@@ -45,7 +45,7 @@ export class BlogDetailComponent implements OnInit {
   ngOnInit() {
     this.getBlogDetails();
     this.getCategories();
-    //this.getPostsinBlog();
+    this.getPostsinBlog();
   }
 
   getBlogDetails(){
@@ -98,6 +98,8 @@ export class BlogDetailComponent implements OnInit {
       err => {
         this.blog_posts_error_message = err.message;
         this.blog_posts = BLOG_POSTS;
+        // REOVE before deployment!
+        console.log('blog_posts after err: ', this.blog_posts);
       },
       () => {
         console.log("BlogDetailComponent.getPostsinBlog() done running.")
