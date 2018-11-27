@@ -69,11 +69,14 @@ export class BlogCategoryDetailComponent implements OnInit {
         },
         err => {
           this.posts_error_message = err.message;
+          this.category_posts_error_message = "No blog posts were found in the ", this.category.name, "category."
+          this.category_posts = BLOG_POSTS;
+          console.log(this.category_posts);
         },
         () => {
           //REMOVE before deployment
           console.log("BlogCatgoryDetailComponent.getPostsinCategory() called.");
-          this.category_posts_error_message = "No blog posts were found in the ", this.category.name, "category."
+          
         }
       )
     }
