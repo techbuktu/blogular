@@ -44,6 +44,7 @@ export class BlogListComponent implements OnInit {
       },
       err => {
         this.blog_list = BLOG_LIST;
+        console.log('Mock blog list: ', this.blog_list);
         this.blog_error_message = err.message;
 
       },

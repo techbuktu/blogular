@@ -20,7 +20,7 @@ import { BLOG_POSTS } from '../../mock-data/blog_posts';
 })
 export class BlogDetailComponent implements OnInit {
   blogUrl:string;
-  blog;
+  blog:any;
   blog_error_message:string;
   category_list_error_message:string;
   blog_posts_error_message:string;
@@ -52,7 +52,7 @@ export class BlogDetailComponent implements OnInit {
     this.blogService.getBlogByUrl(this.blogUrl).subscribe(
       res => {
         this.blog = res;
-        console.log("BlogDetailComponent.getBlogDetails() =" + this.blog.page);
+        console.log("BlogDetailComponent.getBlogDetails() =" + this.blog.link);
         
       },
       err => {
