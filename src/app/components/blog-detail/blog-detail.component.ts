@@ -26,7 +26,7 @@ export class BlogDetailComponent implements OnInit {
   blog_posts_error_message:string;
   delete_category_error_message:string;
   blog_posts;
-  category_list;
+  category_list:any;
   mock_category_list:string[] = ['Tech Kalam', 'Tastes of the East', 'Rhythms of Africa'];
 
   constructor(private blogService: BlogService, private blogPostService: BlogPostService, 
@@ -37,7 +37,7 @@ export class BlogDetailComponent implements OnInit {
       },
       err => {},
       () => {
-        console.log("Done trying to retrieve :blogUrl from ActivateeRoute.params.")
+        console.log("Done trying to retrieve :blogUrl from ActivatedRoute.params.")
       }
     )
   }
@@ -81,9 +81,10 @@ export class BlogDetailComponent implements OnInit {
       },
       err => {
         this.category_list_error_message = err.message;
-        //this.category_list = CATEGORY_LIST;
+        this.category_list = CATEGORY_LIST;
       },
       () => {
+        // REMOVE before deployment!
         console.log("BlogDetailComponent.getCategories() done running.");
       }
     )

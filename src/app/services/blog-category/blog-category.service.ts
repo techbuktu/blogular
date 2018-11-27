@@ -14,7 +14,7 @@ export class BlogCategoryService {
    }
 
   getCategoriesByBlog(blogUrl){
-    return this.http.get(this.categoryApiUrl+ '?blog__page='+blogUrl);
+    return this.http.get(this.categoryApiUrl+ '?blog__link='+blogUrl);
   }
 
   getCategoryByUrl(categoryUrl){

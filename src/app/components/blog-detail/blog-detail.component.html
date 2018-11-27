@@ -15,9 +15,9 @@
 </h4>
 
 <ul *ngIf="category_list">
-  <li *ngFor="let category of category_list; let i=index">
+  <p *ngFor="let category of category_list; let i=index">
     {{ i+1 }}  <a [routerLink]="['/blogs', blog.link, category.link]">  {{ category.name }} </a>
-  </li>
+  </p>
 </ul>
 
 <h4>
